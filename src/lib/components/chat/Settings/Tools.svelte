@@ -89,19 +89,12 @@
 					</div>
 
 					<div class="my-1.5">
-						<div class="text-xs text-gray-500">
-							{$i18n.t('Connect to your own OpenAPI compatible external tool servers.')}
-							<br />
-							{$i18n.t(
-								'CORS must be properly configured by the provider to allow requests from Open WebUI.'
-							)}
-						</div>
 					</div>
 
 					<div class=" text-xs text-gray-600 dark:text-gray-300 mb-2">
 						<a
 							class="underline"
-							href="https://github.com/open-webui/openapi-servers"
+							href=''
 							target="_blank">{$i18n.t('Learn more about OpenAPI tool servers.')}</a
 						>
 					</div>

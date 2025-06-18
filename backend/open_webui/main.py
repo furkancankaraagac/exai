@@ -907,7 +907,7 @@ async def inspect_websocket(request: Request, call_next):
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://10.1.23.145:5173"], #burada CORS_ALLOW_ORIGIN yazıyordu
+    allow_origins=["http://127.0.0.1:5173"], #burada CORS_ALLOW_ORIGIN yazıyordu
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

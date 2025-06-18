@@ -317,11 +317,11 @@
 						</div>
 
 						<div class="mt-2 mb-1 text-xs text-gray-400 dark:text-gray-500">
-							{$i18n.t(`Open WebUI uses faster-whisper internally.`)}
+							{$i18n.t(`EXAI uses faster-whisper internally.`)}
 
 							<a
 								class=" hover:underline dark:text-gray-200 text-gray-800"
-								href="https://github.com/SYSTRAN/faster-whisper"
+								href=""
 								target="_blank"
 							>
 								{$i18n.t(

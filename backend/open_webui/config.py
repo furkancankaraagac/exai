@@ -1613,7 +1613,7 @@ Ensure that the tools are effectively utilized to achieve the highest-quality an
 # Vector Database
 ####################################
 
-VECTOR_DB = os.environ.get("VECTOR_DB", "chroma")
+VECTOR_DB = os.environ.get("VECTOR_DB", "milvus")
 
 # Chroma
 CHROMA_DATA_PATH = f"{DATA_DIR}/vector_db"
@@ -1642,7 +1642,7 @@ if VECTOR_DB == "chroma":
 
 # Milvus
 
-MILVUS_URI = os.environ.get("MILVUS_URI", f"{DATA_DIR}/vector_db/milvus.db")
+MILVUS_URI = os.environ.get("MILVUS_URI", f"tcp://localhost:19530")
 MILVUS_DB = os.environ.get("MILVUS_DB", "default")
 MILVUS_TOKEN = os.environ.get("MILVUS_TOKEN", None)
 
