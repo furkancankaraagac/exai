@@ -148,11 +148,6 @@ async def generate_title(
     request: Request, form_data: dict, user=Depends(get_verified_user)
 ):
 
-    if not request.app.state.config.ENABLE_TITLE_GENERATION:
-        return JSONResponse(
-            status_code=status.HTTP_200_OK,
-            content={"detail": "Title generation is disabled"},
-        )
 
     if getattr(request.state, "direct", False) and hasattr(request.state, "model"):
         models = {
@@ -161,7 +156,7 @@ async def generate_title(
     else:
         models = request.app.state.MODELS
 
-    model_id = form_data["model"]
+    model_id = 'qwen3:14b'
     if model_id not in models:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,

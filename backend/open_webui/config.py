@@ -1235,13 +1235,13 @@ ADMIN_EMAIL = PersistentConfig(
 TASK_MODEL = PersistentConfig(
     "TASK_MODEL",
     "task.model.default",
-    os.environ.get("TASK_MODEL", ""),
+    os.environ.get("∫", "mistral:7b"),
 )
 
 TASK_MODEL_EXTERNAL = PersistentConfig(
     "TASK_MODEL_EXTERNAL",
     "task.model.external",
-    os.environ.get("TASK_MODEL_EXTERNAL", ""),
+    os.environ.get("TASK_MODEL_EXTERNAL", "mistral:7b"),
 )
 
 TITLE_GENERATION_PROMPT_TEMPLATE = PersistentConfig(
@@ -1466,7 +1466,39 @@ The format for the JSON response is strictly:
     {"name": "toolName1", "parameters": {"key1": "value1"}},
     {"name": "toolName2", "parameters": {"key2": "value2"}}
   ]
-}"""
+}
+✅ CORRECT:
+{
+  "tool_calls": [
+    {
+      "name": "draw_pie_chart",
+      "parameters": {
+        "dataset_id": "374__table",
+        "groupby_column": "id",
+        "metric_column": "id",
+        "aggregate_type": "COUNT"
+      }
+    }
+  ]
+}
+
+❌ INCORRECT (will break):
+{
+  "tool_calls": [
+    {
+      "name": "draw_pie_chart",
+      "parameters": {
+        "arguments": {
+          "args": {
+            ...
+          }
+        }
+      }
+    }
+  ]
+}
+
+"""
 
 
 DEFAULT_EMOJI_GENERATION_PROMPT_TEMPLATE = """Your task is to reflect the speaker's likely facial expression through a fitting emoji. Interpret emotions from the message and reflect their facial expression using fitting, diverse emojis (e.g., 😊, 😢, 😡, 😱).

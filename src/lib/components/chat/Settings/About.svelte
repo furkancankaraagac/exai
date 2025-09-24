@@ -57,7 +57,7 @@
 
 
 						<a
-							href="https://github.com/open-webui/open-webui/releases/tag/v{version.latest}"
+							href="https://experilabs.com"
 							target="_blank"
 						>
 							{updateAvailable === null

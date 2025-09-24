@@ -460,3 +460,4 @@ OTEL_TRACES_SAMPLER = os.environ.get(
 
 PIP_OPTIONS = os.getenv("PIP_OPTIONS", "").split()
 PIP_PACKAGE_INDEX_OPTIONS = os.getenv("PIP_PACKAGE_INDEX_OPTIONS", "").split()
+ENABLE_TITLE_GENERATION = os.getenv("ENABLE_TITLE_GENERATION", "True").lower() == "true"

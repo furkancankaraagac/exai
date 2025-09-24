@@ -838,7 +838,7 @@ app.state.config.AUTOCOMPLETE_GENERATION_INPUT_MAX_LENGTH = (
 #
 ########################################
 
-app.state.MODELS = {}
+app.state.MODELS = {"qwen3:14b"}
 
 
 class RedirectMiddleware(BaseHTTPMiddleware):
@@ -907,7 +907,7 @@ async def inspect_websocket(request: Request, call_next):
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:5173"], #burada CORS_ALLOW_ORIGIN yazıyordu
+    allow_origins=["http://13.60.105.34:5173","http://172.17.1.27:5173"], #burada CORS_ALLOW_ORIGIN yazıyordu
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
