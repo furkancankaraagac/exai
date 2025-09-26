@@ -1084,7 +1084,7 @@
 												chatInput?.focus();
 											}}
 										>
-											<button
+											<!-- <button
 												class="bg-transparent hover:bg-gray-100 text-gray-800 dark:text-white dark:hover:bg-gray-800 transition rounded-full p-1.5 outline-hidden focus:outline-hidden"
 												type="button"
 												aria-label="More"
@@ -1099,7 +1099,7 @@
 														d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z"
 													/>
 												</svg>
-											</button>
+											</button> -->
 										</InputMenu>
 
 										<div class="flex gap-[2px] items-center overflow-x-auto scrollbar-none flex-1">
@@ -1165,7 +1165,7 @@
 													</Tooltip>
 												{/if}
 
-												{#if $config?.features?.enable_code_interpreter && ($_user.role === 'admin' || $_user?.permissions?.features?.code_interpreter)}
+												<!-- {#if $config?.features?.enable_code_interpreter && ($_user.role === 'admin' || $_user?.permissions?.features?.code_interpreter)}
 													<Tooltip content={$i18n.t('Execute code for analysis')} placement="top">
 														<button
 															on:click|preventDefault={() =>
@@ -1182,7 +1182,7 @@
 															>
 														</button>
 													</Tooltip>
-												{/if}
+												{/if} -->
 											{/if}
 										</div>
 									</div>
@@ -1364,6 +1364,18 @@
 							</div>
 						</form>
 					{/if}
+				</div>
+				
+				<!-- Experilabs link -->
+				<div class="flex justify-center mt-2">
+					<a 
+						href="https://www.experilabs.com" 
+						target="_blank" 
+						rel="noopener noreferrer"
+						class="text-base italic text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+					>
+					www. experilabs .com
+					</a>
 				</div>
 			</div>
 		</div>

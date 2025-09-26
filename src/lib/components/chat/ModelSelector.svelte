@@ -31,7 +31,10 @@
 		);
 	}
 </script>
-
+<div class="flex flex-col w-full items-start">
+	<span>HM SUMMIT DEMO MODEL</span>
+</div>
+<!-- 
 <div class="flex flex-col w-full items-start">
 	{#each selectedModels as selectedModel, selectedModelIdx}
 		<div class="flex w-full max-w-fit">
@@ -109,10 +112,10 @@
 			{/if}
 		</div>
 	{/each}
-</div>
+</div> -->
 
-{#if showSetDefault}
+<!-- {#if showSetDefault}
 	<div class=" absolute text-left mt-[1px] ml-1 text-[0.7rem] text-gray-500 font-primary">
 		<button on:click={saveDefaultModel}> {$i18n.t('Set as default')}</button>
 	</div>
-{/if}
+{/if} -->

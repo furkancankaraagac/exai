@@ -585,7 +585,7 @@
 					}}
 					draggable="false"
 				>
-					<div class="self-center">
+					<!-- <div class="self-center">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
@@ -604,7 +604,7 @@
 
 					<div class="flex self-center translate-y-[0.5px]">
 						<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Workspace')}</div>
-					</div>
+					</div> -->
 				</a>
 			</div>
 		{/if}
@@ -889,7 +889,7 @@
 			</Folder>
 		</div>
 
-		<div class="px-2">
+		<!-- <div class="px-2">
 			<div class="flex flex-col font-primary">
 				{#if $user !== undefined && $user !== null}
 					<UserMenu
@@ -918,7 +918,7 @@
 					</UserMenu>
 				{/if}
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
 
